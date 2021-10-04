@@ -1,0 +1,14 @@
+:root {
+  --color1: #ff0075;
+  --color2: #172774;
+  --color3: #77d970;
+  --color4: #eeeeee;
+}
+body {
+  background-color: var(--color2);
+}
+.haeder {
+  text-align: center;
+  color: var(--color3);
+  font-size: 50px;
+}
