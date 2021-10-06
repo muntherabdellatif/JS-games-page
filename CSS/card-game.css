@@ -1,0 +1,26 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  width: 600px;
+}
+.grid div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  background-color: blueviolet;
+  font-size: 70px;
+  color: white;
+}
+.grid div.blank {
+  color: blueviolet;
+}
+.grid div.choosen1 {
+  color: gold;
+}
+.grid div.choosen2 {
+  color: silver;
+}
