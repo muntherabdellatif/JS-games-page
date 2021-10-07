@@ -1,26 +1,52 @@
+:root {
+  --color1: #ff0075;
+  --color2: #172774;
+  --color3: #77d970;
+  --color4: #eeeeee;
+}
+body {
+  background-color: var(--color4);
+}
 .grid {
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
-  height: 400px;
-  width: 600px;
+  height: 568px;
+  width: 900px;
 }
 .grid div {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90px;
-  height: 90px;
+  width: 130px;
+  height: 130px;
   margin: auto;
-  background-color: blueviolet;
+  background-color: var(--color3);
   font-size: 70px;
-  color: white;
+  color: var(--color4);
 }
 .grid div.blank {
-  color: blueviolet;
+  color: var(--color3);
 }
 .grid div.choosen1 {
   color: gold;
 }
 .grid div.choosen2 {
-  color: silver;
+  color: var(--color1);
+}
+.result-container {
+  text-align: center;
+  font-size: 20px;
+  color: var(--color2);
+  display: flex;
+  justify-content: space-around;
+}
+h3 {
+  display: inline-block;
+}
+.header h1 {
+  margin: 0px 0px;
+  text-align: center;
+  font-size: 50px;
+  color: var(--color2);
 }
