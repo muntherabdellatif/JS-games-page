@@ -80,3 +80,12 @@ h1 {
   color: var(--color4);
   background-color: var(--color2);
 }
+@media (max-width: 992px) {
+  .grid-container .grid {
+    margin-bottom: 71px;
+  }
+  .Total-score-card {
+    width: 300px;
+    height: 369px;
+  }
+}
