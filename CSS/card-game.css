@@ -50,3 +50,20 @@ h3 {
   font-size: 50px;
   color: var(--color2);
 }
+@media (max-width: 992px) {
+  .grid {
+    width: 300px;
+  }
+  .grid div {
+    width: 65px;
+    height: 65px;
+    margin: 5px;
+    font-size: 60px;
+  }
+  .result-container {
+    font-size: 16px;
+  }
+  .header h2 {
+    font-size: 16px;
+  }
+}
