@@ -1,0 +1,82 @@
+:root {
+  --color1: #ff0075;
+  --color2: #172774;
+  --color3: #77d970;
+  --color4: #eeeeee;
+}
+body {
+  color: var(--color4);
+}
+.game-page.finished {
+  pointer-events: none;
+  opacity: 0.2;
+}
+h1,
+h2 {
+  color: var(--color1);
+  text-align: center;
+}
+h1 {
+  font-size: 50px;
+  margin-bottom: 48px;
+}
+.grid-container .grid {
+  margin-bottom: 140px;
+}
+.grid-container .grid .square {
+  margin: auto;
+  background-image: url(../img/hole.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  margin-bottom: 10px;
+}
+.grid-container .grid .square.mole {
+  background-image: url(../img/mole.jpg);
+}
+.Total-score-card {
+  display: none;
+  font-size: 50px;
+  box-shadow: -20px 12px 20px 0px var(--color2);
+  border: solid var(--color2) 5px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 500px;
+  height: 500px;
+  z-index: 1000;
+  border-radius: 15px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.Total-score-card.finished {
+  display: flex;
+}
+#replay {
+  cursor: pointer;
+  padding: 20px;
+  font-size: 30px;
+  color: var(--color2);
+  border: var(--color2) solid 2px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+#replay:hover {
+  color: var(--color4);
+  background-color: var(--color2);
+}
