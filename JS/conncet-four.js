@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded',()=> {
     const squares =document.querySelectorAll(".grid div");
-    const result =document.querySelector("#result");
+    const resultBox =document.querySelector("#result");
+    const result =document.querySelector("#result h1");
     const currentPlayer =document.querySelector("#player");
+    const gameContainer =document.querySelector(".game-containt");
+    let replayBtn =document.querySelector("#replay")
     let currentPlayerNumber =1;
 
     for(let i=0; i<squares.length ;i++){
@@ -9,7 +12,7 @@ document.addEventListener('DOMContentLoaded',()=> {
             squares[i].onclick = function () {
                 if (squares[index+7]){ // upper row
                        /*check square bellow*/
-                    if (squares[index+7].classList.contains("taken")){
+                    if (squares[index+7].classList.contains("taken") && !squares[index].classList.contains("taken")){
                         if(currentPlayerNumber===1) {
                             squares[index].classList.add("taken");
                             squares[index].classList.add("player-one");
@@ -23,10 +26,8 @@ document.addEventListener('DOMContentLoaded',()=> {
                             currentPlayerNumber=1;
                             currentPlayer.textContent="1";
                         }
-                    }else {
-                        alert("you can not go here !")
                     }
-                }else { // last row
+                }else if(!squares[index+7] && !squares[index].classList.contains("taken") ) { // last row
                     if(currentPlayerNumber===1) {
                         squares[index].classList.add("taken");
                         squares[index].classList.add("player-one");
@@ -70,16 +71,23 @@ document.addEventListener('DOMContentLoaded',()=> {
                    square2.classList.contains("player-one") && 
                    square3.classList.contains("player-one") &&
                    square4.classList.contains("player-one") ) {
-                    result.innerHTML="player 1 wins!";
+                    resultBox.classList.add("end");
+                    gameContainer.classList.add("end");
+                    result.textContent="player 1 wins!";
                    }else if ( square1.classList.contains("player-two") &&
                               square2.classList.contains("player-two") && 
                               square3.classList.contains("player-two") &&
                               square4.classList.contains("player-two")){
-                    result.innerHTML="player 2 wins!";        
+                    result.textContent="player 2 wins!";  
+                    resultBox.classList.add("end");  
+                    gameContainer.classList.add("end");
                 }
 
             }
         }
     }
     squares.forEach(square=>square.addEventListener("click",checkBoard))
+    replayBtn.addEventListener("click", function() {
+        window.location = window.location.href;
+    });
 });

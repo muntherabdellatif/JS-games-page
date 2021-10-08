@@ -147,7 +147,6 @@ document.addEventListener('DOMContentLoaded',()=> {
         const optionOneId =cardChoosenId[0];
         const optionTwoId =cardChoosenId[1];
         if (cardChoosen[1] === cardChoosen[0]) {
-            alert ("you found a match") ;
             if (player==0){
                 cards[optionOneId].classList.add("choosen1");
                 cards[optionTwoId].classList.add("choosen1");
@@ -161,7 +160,6 @@ document.addEventListener('DOMContentLoaded',()=> {
         }else {
             cards[optionOneId].classList.add("blank");
             cards[optionTwoId].classList.add("blank");
-            alert ("Sorry, try again") ;
         }
         cardChoosen= [];
         cardChoosenId=[];
