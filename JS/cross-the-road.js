@@ -65,6 +65,12 @@ document.addEventListener('DOMContentLoaded',()=> {
             resultBox.classList.add("end");
             resultBoxMass.textContent="you lose!"
         }
+        // win 
+        if (manId<15){
+            gameArea.classList.add("end");
+            resultBox.classList.add("end");
+            resultBoxMass.textContent="you win!"
+        }
     }
     document.addEventListener("keydown", function(event) {
         squares[manId].classList.remove("man");
