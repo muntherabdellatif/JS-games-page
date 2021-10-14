@@ -4,7 +4,11 @@ document.addEventListener('DOMContentLoaded',()=> {
     let gameArea=document.querySelector(".game-area");
     let resultBox=document.querySelector(".result-box");
     let resultBoxMass=document.querySelector(".result-box h1");
-    let replayBtn =document.querySelector('#replay')
+    let replayBtn =document.querySelector('#replay');
+    let leftBtn =document.querySelector(".left");
+    let rightBtn =document.querySelector(".right");
+    let shootBtn =document.querySelector(".shoot");
+    let shootKey=0;
     let width = 15 ;
     let currentShooterIndex = 202 ;
     let direction =1;
@@ -30,6 +34,20 @@ document.addEventListener('DOMContentLoaded',()=> {
                     currentShooterIndex +=1;
                 }
                 break ;
+        }
+        squares[currentShooterIndex].classList.add("shooter");   
+    }
+    leftBtn.onclick =function() {
+        squares[currentShooterIndex].classList.remove("shooter");
+        if (currentShooterIndex%width !==0){
+            currentShooterIndex -=1; 
+        }
+        squares[currentShooterIndex].classList.add("shooter");   
+    }
+    rightBtn.onclick =function() {
+        squares[currentShooterIndex].classList.remove("shooter");
+        if (currentShooterIndex%width !==0){
+            currentShooterIndex +=1; 
         }
         squares[currentShooterIndex].classList.add("shooter");   
     }
@@ -124,9 +142,18 @@ document.addEventListener('DOMContentLoaded',()=> {
                 }
             }
         }
-        if(e.key==="Enter"){ 
+        if(shootKey===1 ){ 
             laserId=setInterval(MoveLaser,100);
-        }     
+            shootKey=0;
+        }else if(e.key==="Enter") {
+            laserId=setInterval(MoveLaser,100);
+            shootKey=0;
+        }  
     }
     document.addEventListener("keyup",shoot);
+    shootBtn.onclick = function () {
+        console.log("shoot");
+        shootKey=1;
+        shoot();
+    }
 })      

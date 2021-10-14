@@ -54,7 +54,7 @@ body {
   background-color: var(--color2);
 }
 .game-area h1 {
-  margin: 5px;
+  margin: 30px;
   color: var(--color2);
   text-align: center;
   font-size: 50px;
@@ -65,7 +65,7 @@ body {
   flex-wrap: wrap;
   width: 600px;
   height: 600px;
-  margin: auto;
+  margin: 0px auto 30px;
 }
 .game-area .grid div {
   margin: 1px;
@@ -77,6 +77,68 @@ body {
   color: var(--color2);
   text-align: center;
   font-size: 3rem;
+}
+.control {
+  display: none;
+  justify-content: space-around;
+  margin: auto;
+  background-color: var(--color1);
+  width: 80%;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.control div {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: var(--color4);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.control div:hover {
+  background-color: var(--color2);
+}
+.control div:hover i {
+  color: var(--color4);
+}
+.control div i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 3rem;
+  color: var(--color2);
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+@media (max-width: 991px) {
+  .control {
+    display: flex;
+    margin-bottom: 50px;
+  }
+  .game-area .grid {
+    margin-bottom: 50px;
+    width: 300px;
+    height: 300px;
+  }
+  .game-area .grid div {
+    margin: 0.5px;
+    width: 19px;
+    height: 19px;
+  }
+  .game-area h1 {
+    margin: 50px;
+  }
 }
 .shooter {
   background-color: var(--color2);
