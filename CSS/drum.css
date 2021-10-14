@@ -20,31 +20,31 @@ footer {
   font-size: 2.5rem;
 }
 .w {
-  background-image: url(../Drum-kit/images/tom1.png);
+  background-image: url(../img/tom1.png);
   background-size: cover;
 }
 .a {
-  background-image: url(../Drum-kit/images/snare.png);
+  background-image: url(../img/snare.png);
   background-size: cover;
 }
 .s {
-  background-image: url(../Drum-kit/images/tom2.png);
+  background-image: url(../img/tom2.png);
   background-size: cover;
 }
 .d {
-  background-image: url(../Drum-kit/images/kick.png);
+  background-image: url(../img/kick.png);
   background-size: cover;
 }
 .j {
-  background-image: url(../Drum-kit/images/tom3.png);
+  background-image: url(../img/tom3.png);
   background-size: cover;
 }
 .k {
-  background-image: url(../Drum-kit/images/crash.png);
+  background-image: url(../img/crash.png);
   background-size: cover;
 }
 .l {
-  background-image: url(../Drum-kit/images/tom4.png);
+  background-image: url(../img/tom4.png);
   background-size: cover;
 }
 .set {
