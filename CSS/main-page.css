@@ -4,6 +4,9 @@
   --color3: #77d970;
   --color4: #eeeeee;
 }
+a {
+  text-decoration: none;
+}
 body {
   background-color: var(--color2);
 }

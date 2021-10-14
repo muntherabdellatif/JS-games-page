@@ -72,6 +72,12 @@ body {
   width: 38px;
   height: 38px;
 }
+.game-area .grid div.car {
+  background-color: var(--color1);
+}
+.game-area .grid div.man {
+  background-color: var(--color2);
+}
 .game-area h3 {
   margin: 0;
   color: var(--color2);
@@ -80,23 +86,26 @@ body {
 }
 .control {
   display: none;
-  justify-content: space-around;
-  margin: auto;
-  background-color: var(--color1);
-  width: 80%;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
+  overflow: hidden;
+  background-color: var(--color2);
+  position: relative;
+  width: 303px;
+  height: 303px;
+  margin: 10px auto;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 .control div {
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100px;
   height: 100px;
-  background-color: var(--color4);
+  border: solid 1px var(--color2);
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -104,22 +113,50 @@ body {
   -o-border-radius: 50%;
 }
 .control div:hover {
-  background-color: var(--color2);
+  background-color: var(--color4);
 }
 .control div:hover i {
-  color: var(--color4);
+  color: var(--color2);
 }
 .control div i {
-  position: absolute;
+  color: var(--color4);
+  font-size: 40px;
+}
+.control .up {
+  top: 0;
   left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.control .left {
+  left: 0;
   top: 50%;
-  font-size: 3rem;
-  color: var(--color2);
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.control .right {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.control .down {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 @media (max-width: 991px) {
   .control {
