@@ -85,10 +85,16 @@ body {
     height: 40vh;
     object-fit: contain;
   }
-  .game-text h3 {
-    font-size: 16px;
+  .game-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .game-text i {
-    font-size: 20px;
+  .game-text h3 {
+    display: none;
+  }
+  .game-text h1 {
+    margin-bottom: 0px !important;
+    font-size: 50px;
   }
 }
