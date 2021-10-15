@@ -17,8 +17,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
   border: solid 1px var(--color2);
   box-shadow: -19px 20px 20px 0 var(--color2);
   position: absolute;
@@ -140,23 +140,18 @@ body {
   .game-area h1 {
     margin: 50px;
   }
+  .result-box {
+    width: 300px;
+    height: 300px;
+  }
+  .result-box h1 {
+    font-size: 40px;
+  }
 }
-.shooter {
-  background-image: url(../img/shooter.png);
-  background-size: cover;
+.element,
+.center {
+  background-color: var(--color2);
 }
-.invader {
-  background-image: url(../img/invader.png);
-  background-size: cover;
-}
-.laser {
-  background-image: url(../img/shoot.jpg);
-  background-size: cover;
-}
-.laser.empty {
-  background-image: none;
-}
-.boom {
-  background-image: url(../img/boom.jpg);
-  background-size: cover;
+.stoped-element {
+  background-color: var(--color3);
 }

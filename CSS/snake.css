@@ -5,7 +5,7 @@
   --color4: #eeeeee;
 }
 body {
-  color: var(--color4);
+  background-color: var(--color4);
 }
 .score-box h2 {
   color: var(--color2);

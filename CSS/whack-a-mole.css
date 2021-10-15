@@ -5,7 +5,7 @@
   --color4: #eeeeee;
 }
 body {
-  color: var(--color4);
+  background-color: var(--color4);
 }
 .game-page.finished {
   pointer-events: none;

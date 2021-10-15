@@ -6,7 +6,7 @@
 }
 body {
   box-sizing: border-box;
-  color: var(--color4);
+  background-color: var(--color4);
 }
 .game-area.end {
   opacity: 0.3;
@@ -60,6 +60,7 @@ body {
   font-size: 50px;
 }
 .game-area .grid {
+  background-color: white;
   border: solid 2px var(--color2);
   display: flex;
   flex-wrap: wrap;
