@@ -35,14 +35,22 @@ document.addEventListener('DOMContentLoaded',()=> {
         for (let row=0;row<rowsStart.length;row++){
             for (let rand=0;rand<7;rand++){
                 cars[row][rand]=Math.floor(Math.random()*(width-1)+rowsStart[row]);
-                squares[cars[row][rand]].classList.add("car");
+                if (rowMoveingDirction[row]===1){
+                    squares[cars[row][rand]].classList.add("car-right");
+                }else {
+                    squares[cars[row][rand]].classList.add("car-left");
+                }
             }
         }
     }
     function moveCars () {
         for (let row=0;row<rowsStart.length;row++){
             for(let car=0;car<7;car++){
-                squares[cars[row][car]].classList.remove("car");
+                if (rowMoveingDirction[row]===1){
+                    squares[cars[row][car]].classList.remove("car-right");
+                }else {
+                    squares[cars[row][car]].classList.remove("car-left");
+                }
                 if(rowMoveingDirction[row]===0){ //left
                     if (cars[row][car]>rowsStart[row]){
                         cars[row][car] -=1;
@@ -56,13 +64,18 @@ document.addEventListener('DOMContentLoaded',()=> {
                         cars[row][car] -=14;
                     }
                 }
-                squares[cars[row][car]].classList.add("car");
+                if (rowMoveingDirction[row]===1){
+                    squares[cars[row][car]].classList.add("car-right");
+                }else {
+                    squares[cars[row][car]].classList.add("car-left");
+                }
             }
         }
         // lose
-        if (squares[manId].classList.contains("car")){
+        if (squares[manId].classList.contains("car-left") || squares[manId].classList.contains("car-right")){
             gameArea.classList.add("end");
             resultBox.classList.add("end");
+            squares[manId].classList.add("boom");
             resultBoxMass.textContent="you lose!"
         }
         // win 

@@ -141,17 +141,21 @@ body {
   }
 }
 .shooter {
-  background-color: var(--color2);
+  background-image: url(../img/shooter.png);
+  background-size: cover;
 }
 .invader {
-  background-color: var(--color1);
+  background-image: url(../img/invader.png);
+  background-size: cover;
 }
 .laser {
-  background-color: var(--color3);
+  background-image: url(../img/shoot.jpg);
+  background-size: cover;
 }
 .laser.empty {
-  background-color: white !important;
+  background-image: none;
 }
 .boom {
-  background-color: red;
+  background-image: url(../img/boom.jpg);
+  background-size: cover;
 }

@@ -72,11 +72,21 @@ body {
   width: 38px;
   height: 38px;
 }
-.game-area .grid div.car {
-  background-color: var(--color1);
+.game-area .grid div.car-right {
+  background-image: url(../img/car-right.jpg);
+  background-size: cover;
+}
+.game-area .grid div.car-left {
+  background-image: url(../img/car-left.webp);
+  background-size: cover;
 }
 .game-area .grid div.man {
-  background-color: var(--color2);
+  background-image: url(../img/man.png);
+  background-size: cover;
+}
+.game-area .grid div.boom {
+  background-image: url(../img/boom.jpg);
+  background-size: cover;
 }
 .game-area h3 {
   margin: 0;
