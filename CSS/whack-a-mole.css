@@ -11,14 +11,15 @@ body {
   pointer-events: none;
   opacity: 0.2;
 }
-h1,
 h2 {
   color: var(--color1);
   text-align: center;
 }
 h1 {
+  text-align: center;
+  color: var(--color2);
   font-size: 50px;
-  margin-bottom: 48px;
+  margin: 48px;
 }
 .grid-container .grid {
   margin-bottom: 140px;
